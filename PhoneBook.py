@@ -13,26 +13,28 @@ phone_book = dict()
 
 welcome()
 
-menu()
+while True:
+    menu()
+    choice = int(input("Введите режим работы: "))
 
-choice = int(input("Введите режим работы"))
+    if choice == 1:
+        print(phone_book)
 
-if choice == 1:
-    print(phone_book)
+    elif choice == 2:
+        tel = input("Введите номер телефона: ")
+        value = input_data()
+        phone_book[tel] = value
 
-elif choice == 2:
-    tel = input("Введите номер телефона: ")
-    value = input_data()
-    phone_book[tel] = value
+    elif choice == 3:
+        print()
 
-elif choice == 3:
+    elif choice == 4:
+        print()
 
-elif choice == 4:
+    elif choice == 0:
+        print("До свидания")
+        break
 
-elif choice == 0:
-
-else:
-    print("Ошибка")
-
-
-print(phone_book)
+    else:
+        print("Ошибка")
+        continue
