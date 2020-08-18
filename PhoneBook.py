@@ -19,11 +19,37 @@ def input_data():
     temp.append(address)
     return temp
 
+
 phone_book = dict()
 
-tel = input("Введите номер телефона: ")
-value = input_data()
+print("*" * 41)
+print("*** PhoneBook - телефонный справочник ***")
+print("*" * 41)
+print("Режим работы:")
+print("1. Показать все записи")
+print("2. Добавить запись")
+print("3. Редактировать запись")
+print("4. Удалить запись")
+print("0. Выход")
 
-phone_book[tel] = value
+choice = int(input("Введите режим работы"))
+
+if choice == 1:
+    print(phone_book)
+
+elif choice == 2:
+    tel = input("Введите номер телефона: ")
+    value = input_data()
+    phone_book[tel] = value
+
+elif choice == 3:
+
+elif choice == 4:
+
+elif choice == 0:
+
+else:
+    print("Ошибка")
+
 
 print(phone_book)
