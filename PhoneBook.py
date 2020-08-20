@@ -13,32 +13,32 @@ phone_book = dict()
 
 welcome()
 
+import_(phone_book)
+
 while True:
     menu()
-    choice = int(input("Введите режим работы: "))
-    print("===== ===== =====")
+    choice = (input("Введите режим работы: "))
 
-    if choice == 1:
+    if choice == "1":
         show(phone_book)
 
-    elif choice == 2:
+    elif choice == "2":
         input_(phone_book)
 
-    elif choice == 3:
+    elif choice == "3":
         edit(phone_book)
 
-    elif choice == 4:
+    elif choice == "4":
         delete(phone_book)
 
-    elif choice == 5:
+    elif choice == "5":
         save(phone_book)
 
-    elif choice == 0:
+    elif choice == "0":
         print("До свидания!")
-        print("===== ===== =====")
+        log("Выход из программы")
         break
 
     else:
         print("Ошибка")
-        print("===== ===== =====")
-        continue
+        log("Неправильный режим")
